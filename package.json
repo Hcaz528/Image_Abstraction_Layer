@@ -1,22 +1,22 @@
 {
-  "name": "my-glitch-app",
+  "name": "Image Abstraction Layer",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Making a simple image search api with pagination",
   "main": "server.js",
   "scripts": {
-    "start": "node start.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.15.3",
     "pug": "^0.1.0",
-    "dotenv": "^4.0.0",
     "path": "^0.12.7",
-    "mongoose": "^4.11.1",
-    "stylus": "^0.54.5",
-    "es6-promisify": "^5.0.0"
+    "request": "^2.81.0",
+    "node-google-image-search": "^1.0.3",
+    "axios": "^0.16.2",
+    "mongoose": "^4.11.3"
   },
   "engines": {
-    "node": "8.1.x"
+    "node": "8.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/welcome-project"

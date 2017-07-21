@@ -1,9 +1,9 @@
 doctype html
 html
   head
-    title URL Shortener Microservice
-    meta(name='description', content='A cool thing made with Glitch')
-    link#favicon(rel='icon', href='data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAMCwoAJSNhwBSSkIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIAADMzMzMzMzMBERERERERERAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgBwAAgAEAAAAAAADcLgAA3e4AAN3uAADcLAAA3eoAAN3mAAAELgAA//8AAJaWAABmZQAAkGEAAHZmAACWkQAA', type='image/x-icon')
+    title FIAL: Image Abstraction Layer!
+    meta(name='description', content='Freecodecamp image abstraction layer')
+    link#favicon(rel='icon', href='https://glitch.com/edit/favicon-app.ico', type='image/x-icon')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -11,34 +11,15 @@ html
   body
     header
       h1
-        | A FreeCodeCamp URL Shortener Microservice
+        | FIAL
+      h4
+      | Freecodecamp Image Abstraction Layer
     main
-      h3 User Stories:
-      ul
-        li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
-        li When I visit that shortened URL, it will redirect me to my original link.
-      
-      h3 Example creation usage:
-      ul
-        li 
-          code #{title}/new/#{example}
-        li 
-          code #{title}/new/http://foo.com:80
-      
-      h3 Example creation:
-      ul
-        li 
-          code { "original_url":"http://foo.com:80", "short_url":"#{title}/8170" }
-      
-      h3 Usage:
-      ul
-        li 
-          code #{title}253
-    
-      h3 Will redirect to:
-      ul
-        li 
-          code #{example}      
-    // Your web-app is https, so your scripts need to be too
-    //script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
-    //script(src='/client.js')
+      form(action="/api/v1/imagesearch" method="POST")
+        input(type='text', maxlength='100', placeholder='Search Term e.g. "Poodle"')
+        .buttons
+          button(type='submit') Submit
+          button(data-getthis='latest') Latest
+      section.dreams
+        ul#images
+  script(src='/client.js')
