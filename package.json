@@ -1,0 +1,30 @@
+{
+  "name": "my-glitch-app",
+  "version": "0.0.1",
+  "description": "What am I about?",
+  "main": "server.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^0.1.0",
+    "dotenv": "^4.0.0",
+    "path": "^0.12.7",
+    "mongoose": "^4.11.1",
+    "stylus": "^0.54.5",
+    "es6-promisify": "^5.0.0"
+  },
+  "engines": {
+    "node": "8.1.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/welcome-project"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
